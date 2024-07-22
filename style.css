@@ -8,18 +8,39 @@
 section{
   margin: 10px 90px;
 }
+.card{
+  background-color: #fff;
+  width: 900px;
+  height: 800px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  margin: 140px auto;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+  position: relative;
+  
+}
+
+h1{
+  position: fixed;
+  top: 130px;
+}
 
 
 h2{
   color:  hsl(292, 42%, 14%);
   font-size: 1.3rem;
+  margin:25px 35px;
+ 
 }
 
 p{
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: hsl(292, 21%, 64%)
+  color: hsl(292, 21%, 64%);
+  margin:20px 35px;
 }
 
 .plus-btn{
@@ -36,19 +57,12 @@ body{
   background-size: 100%;
   background-attachment: fixed;
   background-color:  hsl(275, 100%, 97%);
+  overflow: hidden;
+
 }
 
-.card{
-  background-color: #fff;
-  width: 900px;
-  height: 700px;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  place-content: center;
-  margin: 250px auto;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
-  position: relative;
+img{
+  cursor: pointer;
 }
 
 
@@ -68,5 +82,13 @@ body{
   display: block;
   position: absolute;
   left: 80px;
-  top: 110px;
+  top: 20px;
+}
+
+hr{
+  border: 1px solid #d3d3d3;
+}
+
+.hidden{
+  display: none;
 }

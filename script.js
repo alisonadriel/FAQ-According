@@ -1,23 +1,20 @@
-const plus = document.querySelectorAll(".plus");
-const minus = document.querySelectorAll(".minus");
-const hidden = document.querySelectorAll(".hidden");
-const para = document.querySelectorAll(".p");
+const accordionBtns = document.querySelectorAll('.accordion-btn');
 
+accordionBtns.forEach(btn=>{
+  btn.addEventListener('click', function(){
+    this.classList.toggle('active')
+    const accordionDescription = this.nextElementSibling;
+    const plusIcon = document.querySelector('.plus-icon');
+    const minusIcon = document.querySelector('.minus-icon');
 
-for (let i = 0; i < plus.length; i++) {
-  plus[i].addEventListener("click", function () {
-    plus[i].classList.toggle("hidden");
-    minus[i].classList.toggle("hidden");
-    para[i].classList.toggle("hidden");
-  });
-}
-
-for (let i = 0; i < minus.length; i++) {
-  minus[i].addEventListener("click", function () {
-    minus[i].classList.toggle("hidden");
-    plus[i].classList.toggle("hidden");
-    para[i].classList.toggle("hidden");
-  });
-}
-
-
+    if(accordionDescription.style.maxHeight){
+      accordionDescription.style.maxHeight = null
+      plusIcon.style.display = 'block'
+      minusIcon.style.display = 'none'
+    }else{
+      accordionDescription.style.maxHeight = accordionDescription.scrollHeight + 'px';
+      plusIcon.style.display = 'none'
+      minusIcon.style.display = 'block'
+    }
+  })
+})

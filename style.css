@@ -70,5 +70,29 @@ button:hover{
   border-bottom: 2px solid var(--light-pink);
 }
 
-.accordion-item
+accordion-item .icons img{
+  min-width: 30px;
+}
 
+ .minus-icon{
+  display: none;
+}
+
+.accordion-description{
+  background-color: var(--white);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
+}
+
+.accordion-description p{
+  color: var(--Grayish-purple);
+  padding: 1rem 0;
+}
+
+@media (width <=540px){
+  body{
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    
+  }
+}
